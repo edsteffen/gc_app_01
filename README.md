@@ -7,13 +7,15 @@ Bem como documentar detalhadamente todos os passos e códigos executados em cada
 > Contribuições sempre serão bem vindas.
 
 ## Stack Inicial do Projeto
-**Backend**
+##### Backend
 > Express + Knex
-**Frontend**
+
+##### Frontend
 > ReactJS
 
 ## BACKEND
 Inicializando o projeto
 ```npm init -y ```
+
 Instalando o Express
 ```npm install express ```

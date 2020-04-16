@@ -13,3 +13,7 @@ Bem como documentar detalhadamente todos os passos e códigos executados em cada
 > ReactJS
 
 ## BACKEND
+Inicializando o projeto
+```npm init -y ```
+Instalando o Express
+```npm install express ```

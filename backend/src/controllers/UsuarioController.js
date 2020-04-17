@@ -1,19 +1,6 @@
 const crypto = require('crypto');
 const connection = require('../database/connection');
 
-async function encript(text=''){
-    var mykey = crypto.createCipher('aes-128-cbc', 'ienide');
-    var mypass = mykey.update(text, 'utf8', 'hex')
-    mypass += mykey.final('hex');
-    return mypass;
-}
-
-async function decript(text=''){
-    var mykey = crypto.createDecipher('aes-128-cbc', 'ienide');
-    var mypass = mykey.update(text, 'hex', 'utf8')
-    mypass += mykey.final('utf8');
-    return mypass;
-}
 
 module.exports = {
     async index(request, response) {

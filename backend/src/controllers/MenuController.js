@@ -12,22 +12,39 @@ module.exports = {
         .select('*');
 
         response.header('X-Total-Count', count['count(*)']);
-        const menus = await connection('menus').select('*');
-    
+
         return response.json(menus);
     },
-    
+
     async create(request, response){
         const { descricao, link, icone, tipo, menu_id } = request.body;
-        
-        const [id] = await connection('menus').insert({
-            descricao, 
-            link, 
-            icone, 
-            tipo, 
-            menu_id
-        });
+
+        const [id] = await connection('menus')
+            .insert({descricao, link, icone, tipo, menu_id});
 
         return response.json({ id });
+    },
+
+    async update(request, response){
+        const { descricao, link, icone, tipo, menu_id } = request.body;
+        const { id } = request.params;
+        await connection('menus')
+            .where('id', id)
+            .update({descricao, link, icone, tipo, menu_id});
+
+        return response.status(204).send();
+    },
+
+    async delete(request, response){
+        const { id } = request.params;
+        const token = request.headers.authorization;
+
+        /*if (session.token !== token){
+            return response.status(401).json({ error: 'Operação negada!'});
+        }*/
+
+        await connection('menus').where('id', id).delete();
+
+        return response.status(204).send();
     }
 }

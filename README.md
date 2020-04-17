@@ -27,6 +27,12 @@ Bem como documentar detalhadamente todos os passos e códigos executados em cada
 ### Estrutura do Banco de Dados
 ```
 -- -----------------------------------------------------
+-- Create Database
+-- -----------------------------------------------------
+CREATE DATABASE `gc_projeto_01` /*!40100 COLLATE 'utf8_general_ci' */
+
+
+-- -----------------------------------------------------
 -- Table  `niveisacesso`
 -- -----------------------------------------------------
 CREATE TABLE IF NOT EXISTS  `niveisacesso` (

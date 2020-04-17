@@ -14,18 +14,11 @@ Bem como documentar detalhadamente todos os passos e códigos executados em cada
 > ReactJS
 
 ## BACKEND
-Inicializando o projeto
-
-```npm init -y ```
-
-Instalando pacote Express
-
-```npm install express ```
-
-Instalando pacote Knex (Manupulação do Banco de Dados)
-
-```npm install knex ``` ** instalando o pacote do Knex para MySQL ** ```npm install mysql ```
-
-Executando pacote Knex 
-
-```npx knex init ``` 
+### Pacotes
+| Código                    | Descrição                                    |
+|---------------------------|----------------------------------------------|
+|```npm init -y ```         | Inicializando o projeto                      |
+|```npm install express ``` | Instalando pacote Express                    |
+|```npm install knex ```    | Instalando pacote Knex (BD)                  |
+|```npm install mysql ```   | instalando o pacote do MySQL para Knex       |
+|```npx knex init ```       | Executando pacote Knex                       |

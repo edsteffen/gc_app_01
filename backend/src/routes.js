@@ -1,11 +1,13 @@
 const express = require('express');
+const MenuController = require('./controllers/MenuController');
+const LoginController = require('./controllers/LoginController');
 const routes = express.Router();
 
-routes.get('/users', UserController.index);
-routes.post('/users', UserController.create);
-routes.delete('/users/:id', UserController.delete);
+routes.get('/menus', MenuController.index);
+routes.post('/menus', MenuController.create);
+routes.put('/menus/:id', MenuController.update);
+routes.delete('/menus/:id', MenuController.delete);
 
-routes.get('/sessions', SessionController.index);
-routes.post('/sessions', SessionController.create);
+routes.post('/login', LoginController.test);
 
 module.exports = routes;

@@ -15,7 +15,17 @@ Bem como documentar detalhadamente todos os passos e códigos executados em cada
 
 ## BACKEND
 Inicializando o projeto
+
 ```npm init -y ```
 
-Instalando o Express
+Instalando pacote Express
+
 ```npm install express ```
+
+Instalando pacote Knex (Manupulação do Banco de Dados)
+
+```npm install knex ``` ** instalando o pacote do Knex para MySQL ** ```npm install mysql ```
+
+Executando pacote Knex 
+
+```npx knex init ``` 

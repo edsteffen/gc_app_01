@@ -23,6 +23,8 @@ Bem como documentar detalhadamente todos os passos e códigos executados em cada
 |```npm install knex ```     | Instalando pacote Knex (BD)                  |
 |```npm install mysql ```    | Instalando o pacote do MySQL para Knex       |
 |```npx knex init ```        | Executando pacote Knex                       |
+|```npm install dotenv ```   | Pacote para trabalhar com parametros config  |
+
 
 ### Estrutura do Banco de Dados
 ```
@@ -70,7 +72,7 @@ ENGINE = InnoDB;
 -- Table  `menus`
 -- -----------------------------------------------------
 CREATE TABLE IF NOT EXISTS  `menus` (
-  `id` INT NOT NULL,
+  `id` INT NULL AUTO_INCREMENT,
   `descricao` VARCHAR(100) NULL,
   `link` VARCHAR(250) NULL,
   `icone` VARCHAR(250) NULL,

@@ -20,5 +20,5 @@ Bem como documentar detalhadamente todos os passos e códigos executados em cada
 |```npm init -y ```         | Inicializando o projeto                      |
 |```npm install express ``` | Instalando pacote Express                    |
 |```npm install knex ```    | Instalando pacote Knex (BD)                  |
-|```npm install mysql ```   | instalando o pacote do MySQL para Knex       |
+|```npm install mysql ```   | Instalando o pacote do MySQL para Knex       |
 |```npx knex init ```       | Executando pacote Knex                       |

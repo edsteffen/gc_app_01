@@ -56,6 +56,7 @@ CREATE TABLE IF NOT EXISTS  `usuarios` (
   `login` VARCHAR(50) NOT NULL,
   `senha` VARCHAR(100) NOT NULL,
   `nivel_id` INT NOT NULL,
+  `foto` VARCHAR(250) NULL,
   `per_ler` VARCHAR(3) NULL,
   `per_salvar` VARCHAR(3) NULL,
   `per_atualizar` VARCHAR(3) NULL,

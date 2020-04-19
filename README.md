@@ -24,6 +24,7 @@ Bem como documentar detalhadamente todos os passos e códigos executados em cada
 |```npm install mysql ```    | Instalando o pacote do MySQL para Knex       |
 |```npx knex init ```        | Executando pacote Knex                       |
 |```npm install dotenv ```   | Pacote para trabalhar com parametros config  |
+|```npm install cors ```     | Pacote Middleware para rotas                 |
 
 
 ### Estrutura do Banco de Dados

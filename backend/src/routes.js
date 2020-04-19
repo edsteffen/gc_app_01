@@ -8,7 +8,7 @@ const routes = express.Router();
 
 
 routes.get('/menus', MenuController.index);
-routes.post('/menus', MenuController.create);
+routes.post('/menus', MenuController.validatefields, MenuController.create);
 routes.put('/menus/:id', MenuController.update);
 routes.delete('/menus/:id', MenuController.delete);
 

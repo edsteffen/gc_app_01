@@ -25,6 +25,7 @@ Bem como documentar detalhadamente todos os passos e códigos executados em cada
 |```npx knex init ```        | Executando pacote Knex                       |
 |```npm install dotenv ```   | Pacote para trabalhar com parametros config  |
 |```npm install cors ```     | Pacote Middleware para rotas                 |
+|```npm install express-validator```| Pacote para validações                 |
 
 
 ### Estrutura do Banco de Dados

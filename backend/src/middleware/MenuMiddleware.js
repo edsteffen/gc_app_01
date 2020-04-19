@@ -1,5 +1,5 @@
 module.exports = {
-    async validatefields(request, response, next) {
+    async namefunction(request, response, next) {
         
     }
 }

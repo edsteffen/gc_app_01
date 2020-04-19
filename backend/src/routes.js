@@ -7,8 +7,6 @@ const UsuarioController = require('./controllers/UsuarioController');
 const AuthMiddleware = require('./middleware/AuthMiddleware')
 const routes = express.Router();
 
-
-
 routes.get('/menus', MenuController.index);
 routes.post('/menus', MenuController.validatefields, MenuController.create);
 routes.put('/menus/:id', MenuController.update);
@@ -21,9 +19,10 @@ routes.delete('/niveis/:id', NiveilAcessoController.delete);
 
 routes.get('/usuarios', AuthMiddleware.auth_index, UsuarioController.index);
 routes.post('/usuarios', AuthMiddleware.auth_create, UsuarioController.create);
-routes.put('/usuarios', AuthMiddleware.auth_update, UsuarioController.update);
+routes.put('/usuarios/:id', AuthMiddleware.auth_update, UsuarioController.update);
 routes.delete('/usuarios/:id', AuthMiddleware.auth_delete, UsuarioController.delete);
 
-routes.post('/login', AuthMiddleware.auth_index, LoginController.test);
+routes.post('/test', AuthMiddleware.auth_index, LoginController.test);
+routes.post('/login', LoginController.login);
 
 module.exports = routes;

@@ -26,6 +26,9 @@ module.exports = {
         try {
             const { nome, email, login, senha, nivel_id, foto, per_ler, per_salvar, per_atualizar, per_deletar } = request.body;
 
+            const {tmp} = await connection('usuarios').where('login',login).select('id as tmp').first();
+            if (Number.isInteger(tmp)) { return response.status(401).json({ error: 'Cadastro não permitido!' }); }
+
             var pass = await security.encript(senha);
             
             const [id] = await connection('usuarios').insert({

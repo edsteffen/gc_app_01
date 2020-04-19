@@ -1,7 +1,7 @@
 const connection = require('../database/connection');
 
 module.exports = {
-    async index(request, response) {
+    async index(request, response, next) {
         const { page = 1 } = request.query;
 
         const [count] = await connection('menus').count();
@@ -35,7 +35,7 @@ module.exports = {
         return response.status(204).send();
     },
 
-    async delete(request, response){
+    async delete(request, response, next){
         const { id } = request.params;
         const token = request.headers.authorization;
 

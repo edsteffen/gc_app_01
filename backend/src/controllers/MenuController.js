@@ -15,14 +15,18 @@ module.exports = {
         next();
     },
     async index(request, response) {
-        const { page = 1 } = request.query;
-
+        const { page = 1, sub = -1 } = request.query;
+        if (sub >= 0) {
+            const { sub = 0 } = request.query;
+            const menus = await connection('menus').where('menu_id',sub).select('*');
+            return response.json(menus);
+        }
         const [count] = await connection('menus').count();
 
         const menus = await connection('menus')
-        .limit(10)
-        .offset((page - 1) * 10)
-        .select('*');
+            .limit(10)
+            .offset((page - 1) * 10)
+            .select('*');
 
         response.header('X-Total-Count', count['count(*)']);
 

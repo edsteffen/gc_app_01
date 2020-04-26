@@ -116,4 +116,6 @@ ENGINE = InnoDB;
 | Código                     | Descrição                                    |
 |--------------------------- |----------------------------------------------|
 |```npx create-react-app ``` | Inicializando o projeto React                |
+|```npm install react-icons``` | Instalando o pacote de icones do React     |
+|```npm install react-router-dom``` | Instalando o pacote de Rotas do React |
 

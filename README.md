@@ -109,3 +109,11 @@ CREATE TABLE IF NOT EXISTS  `menus_niveis` (
 ENGINE = InnoDB;
 
 ```
+
+
+## FRONTEND
+### Pacotes
+| Código                     | Descrição                                    |
+|--------------------------- |----------------------------------------------|
+|```npx create-react-app ``` | Inicializando o projeto React                |
+

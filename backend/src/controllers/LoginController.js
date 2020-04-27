@@ -29,7 +29,7 @@ module.exports = {
                     let skey = Date.now() + '-' + id + '-' + per_ler + '-' + per_salvar + '-' + per_atualizar + '-' + per_deletar;
                     let token = await security.encript(skey);
                     response.header('Authorization', token);
-                    return response.status(204).send();
+                    return response.status(200).json({ token });
                 } 
                 else { return response.status(401).json({ error: 'Usuário ou Senha inválidos!'}); }
             } else {

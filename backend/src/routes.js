@@ -5,7 +5,7 @@ const LoginController = require('./controllers/LoginController');
 const NiveilAcessoController = require('./controllers/NivelAcessoController');
 const UsuarioController = require('./controllers/UsuarioController');
 const MenuNivelController = require('./controllers/MenuNivelController');
-const AuthMiddleware = require('./middleware/AuthMiddleware')
+const AuthMiddleware = require('./middleware/AuthMiddleware');
 const routes = express.Router();
 
 routes.get('/menus', MenuController.index);

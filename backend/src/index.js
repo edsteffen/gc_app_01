@@ -1,25 +1,25 @@
 const express = require('express');
 const cors = require('cors');
 const routes = require('./routes');
+
 require('dotenv').config();
 
-var allowedOrigins = ['http://someorigin.com','http://anotherorigin.com','http://localhost:3333/'];
-var corsOptions = {
-    origin: function(origin, callback){
-        if(!origin) return callback(null, true);
-        if(allowedOrigins.indexOf(origin) === -1){
-          var msg = 'Requisição Negada!';
-          return callback(new Error(msg), false);
-        }
-        return callback(null, true);
-      },
-      exposedHeaders: ['Content-Length', 'X-Foo', 'X-Bar'],
-      credentials: true,
-}
-
 const app = express();
-app.use(cors(corsOptions));
 app.use(express.json());
+app.use((req, res, next) => {
+  try {
+      console.log('Estou no CORS');
+      let white_url = ['http://localhost:3000'];
+      res.header('Access-Control-Allow-Origin', white_url);
+      res.header('Access-Control-Allow-Methods', 'GET,PUT,POST,DELETE');
+      res.header('Access-Control-Allow-Headers', 'Content-Type,Authorization');
+      app.use(cors());
+      next();
+  } catch {
+      console.log('ERRO no CORS');
+      return res.status(400).json({ error: 'Requisição não Autorizada!' });
+  }
+});
 app.use(routes);
 
 let port = process.env.DEV_PORT_LISTEN;
